@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FlyLadybug
 {
-    public partial class Form1 : Form
+    public partial class FrmLadybug : Form
     {
-        public Form1()
+        public FrmLadybug()
         {
             InitializeComponent();
         }

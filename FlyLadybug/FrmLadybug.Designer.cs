@@ -1,6 +1,6 @@
 ﻿namespace FlyLadybug
 {
-    partial class Form1
+    partial class FrmLadybug
     {
         /// <summary>
         /// Required designer variable.
