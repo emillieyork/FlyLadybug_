@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.PnlGame = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // PnlGame
+            // 
+            this.PnlGame.Location = new System.Drawing.Point(12, 149);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(600, 400);
+            this.PnlGame.TabIndex = 0;
             // 
             // FrmLadybug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.PnlGame);
             this.Name = "FrmLadybug";
             this.Text = "Fly Ladybug ";
             this.ResumeLayout(false);
@@ -43,6 +52,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel PnlGame;
     }
 }
 
