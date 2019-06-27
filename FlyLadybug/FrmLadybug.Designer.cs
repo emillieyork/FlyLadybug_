@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.TmrBall = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PnlGame
@@ -39,6 +41,11 @@
             this.PnlGame.Size = new System.Drawing.Size(600, 400);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // TmrBall
+            // 
+            this.TmrBall.Enabled = true;
+            this.TmrBall.Tick += new System.EventHandler(this.TmrBall_Tick);
             // 
             // FrmLadybug
             // 
@@ -56,6 +63,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Timer TmrBall;
     }
 }
 
