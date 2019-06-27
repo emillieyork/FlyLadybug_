@@ -17,14 +17,39 @@ namespace FlyLadybug
         //declare the rectangles to display the Ladybug and Balls in
         Rectangle area, area1, area2, area3, area4, area5, area6, area7;
         Random speed = new Random();
-        int speed1;
+        int speed1, speed2, speed3, speed4, speed5, speed6, speed7;
         private void TmrBall_Tick(object sender, EventArgs e)
         {
             area1.X += speed1;// move the area(ball) across the panel 
-            if (area.X > PnlGame.Width)
+            if (area1.X > PnlGame.Width)
             {
                 area1.X = 20;
             }
+            if (area2.X > PnlGame.Width)
+            {
+                area2.X = 20;
+            }
+            if (area3.X > PnlGame.Width)
+            {
+                area3.X = 20;
+            }
+            if (area4.X > PnlGame.Width)
+            {
+                area4.X = 20;
+            }
+            if (area5.X > PnlGame.Width)
+            {
+                area5.X = 20;
+            }
+            if (area6.X > PnlGame.Width)
+            {
+                area6.X = 20;
+            }
+            if (area7.X > PnlGame.Width)
+            {
+                area7.X = 20;
+            }
+
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
 
@@ -55,14 +80,19 @@ namespace FlyLadybug
             InitializeComponent();
             area = new Rectangle(x2, y2, 30, 30); //Ladybug's rectangle
             area1 = new Rectangle(x, y, 20, 20); //ball1's rectangle
-            area2 = new Rectangle(x + 70, y, 40, 40);//ball2's reactangle
-            area3 = new Rectangle(x + 140, y, 40, 40);//ball3's rectangle
-            area4 = new Rectangle(x + 210, y, 40, 40);//ball4's rectangle
-            area5 = new Rectangle(x + 280, y, 40, 40);//ball5's rectangle
-            area6 = new Rectangle(x + 350, y, 40, 40);//ball6's rectangle
-            area7 = new Rectangle(x + 420, y, 40, 40);//ball7's rectangle
+            area2 = new Rectangle(y + 70, x, 20, 20);//ball2's reactangle
+            area3 = new Rectangle(y + 140, x, 20, 20);//ball3's rectangle
+            area4 = new Rectangle(y + 210, x, 20, 20);//ball4's rectangle
+            area5 = new Rectangle(y + 280, x, 20, 20);//ball5's rectangle
+            area6 = new Rectangle(y + 350, x, 20, 20);//ball6's rectangle
+            area7 = new Rectangle(y + 420, x, 20, 20);//ball7's rectangle
             speed1 = speed.Next(5, 10);//ball1's speed will be between 5 and 10
-           
+            speed2 = speed.Next(5, 10);//ball2's speed will be between 5 and 10
+            speed3 = speed.Next(5, 10);//ball3's speed will be between 5 and 10
+            speed4 = speed.Next(5, 10);//ball4's speed will be between 5 and 10
+            speed5 = speed.Next(5, 10);//ball5's speed will be between 5 and 10 
+            speed6 = speed.Next(5, 10);//ball6's speed will be between 5 and 10
+            speed7 = speed.Next(5, 10);//ball7's speed will be between 5 and 10 
         }
     }
 }
