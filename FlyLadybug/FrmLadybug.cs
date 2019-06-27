@@ -13,10 +13,10 @@ namespace FlyLadybug
     public partial class FrmLadybug : Form
     {
         Graphics g; //declare the graphics object
-        int x = 20, y = 20; //starting position of ball
+        int x = 560, y = 20; //starting position of ball
         //declare the rectangles to display the Ladybug and Balls in
         Rectangle area, area1, area2, area3, area4, area5, area6, area7;
-        int x2 = 50, y2 = 290; //starting position of Ladybug
+        int x2 = 10, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
         Image dragon = Image.FromFile(Application.StartupPath + @"/dragon.png");
