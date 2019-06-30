@@ -19,6 +19,7 @@ namespace FlyLadybug
         Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
         Random speed = new Random();
         int[] ballSpeed = new int[7];
+        bool left, right;
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
@@ -35,6 +36,31 @@ namespace FlyLadybug
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
+
+        private void FrmLadybug_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.W)
+            {
+                y -= 1;
+            }
+            if (e.KeyData == Keys.A)
+            {
+                y += 1;
+            }
+        }
+
+        private void FrmLadybug_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.W)
+            {
+                y = 0;
+            }
+            if (e.KeyData == Keys.A)
+            {
+                y = 0;
+            }
+        }
+
         Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)

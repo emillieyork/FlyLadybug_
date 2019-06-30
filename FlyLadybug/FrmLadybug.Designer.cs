@@ -54,8 +54,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.PnlGame);
+            this.KeyPreview = true;
             this.Name = "FrmLadybug";
             this.Text = "Fly Ladybug ";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyUp);
             this.ResumeLayout(false);
 
         }
