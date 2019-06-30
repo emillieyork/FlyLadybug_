@@ -79,13 +79,15 @@ namespace FlyLadybug
         {
             InitializeComponent();
             arealadybug = new Rectangle(x2, y2, 30, 30);//ladybugs rectangle 
-           //position the balls
-           for (int i=0; i < 7; i++)
+                                                        //position the balls
+            for (int i = 0; i < 7; i++)
             {
                 area[i] = new Rectangle(x, y + 70 * i, 40, 40);
+
+                ballSpeed[i] = speed.Next(5, 10);
+                //each ball has a random speed
             }
-            ballSpeed[i] = speed.Next(5, 10);
-            //each ball has a random speed
         }
     }
 }
+
