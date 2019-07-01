@@ -61,6 +61,12 @@ namespace FlyLadybug
             }
         }
 
+        private void TmrLadybug_Tick(object sender, EventArgs e)
+        {
+            if (up) { arealadybug.Y -= 5; } //move ladybug 5 up
+            if (down) { arealadybug.Y += 5;}//moce ladybug 5 down 
+        }
+
         Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
