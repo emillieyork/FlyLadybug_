@@ -27,6 +27,15 @@ namespace FlyLadybug
            for(int i=0;i<=6;i++)
             {
                 area[i].X += ballSpeed[i];
+                //if spaceship collides with any planet lose a life and move planet to the top of the panel
+                if (area[i].IntersectsWith(arealadybug))
+                {
+                    area[i].X = 20;
+                    lives -= 1; //reduce lives by 1
+                    //display the number of lives on the form
+                    Txtlives.Text = lives.ToString();
+                    CheckLives();
+                }
                 if(area[i].X > PnlGame.Width)
                 {
                     score += 1;// add 1 to score
