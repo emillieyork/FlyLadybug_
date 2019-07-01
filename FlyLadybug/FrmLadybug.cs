@@ -63,8 +63,30 @@ namespace FlyLadybug
 
         private void TmrLadybug_Tick(object sender, EventArgs e)
         {
-            if (up) { arealadybug.Y -= 5; } //move ladybug 5 up
-            if (down) { arealadybug.Y += 5;}//moce ladybug 5 down 
+            if (up) //if W key pressed 
+            {
+                if (arealadybug.Y < 10)
+                //check to see if ball within 10 of up side
+                {
+                    arealadybug.Y = 10;
+                    //if it is < 10 away "bounce" it (set position at 10)
+                }
+                {
+                    arealadybug.Y -= 5;
+                    //else move 5 up
+                }
+            }
+            if (down) //if A key pressed 
+            {
+                if(arealadybug.Y > PnlGame.Height - 40)//is spaceship within 40 of right side 
+                {
+                    arealadybug.Y = PnlGame.Height - 40;
+                }
+                else
+                {
+                    arealadybug.Y += 5;
+                }
+            }
         }
 
         Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
