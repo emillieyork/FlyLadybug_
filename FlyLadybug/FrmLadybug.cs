@@ -104,6 +104,11 @@ namespace FlyLadybug
 
         Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
 
+        private void MnuStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
             //get the method from the graphic's class to paint on the panel
