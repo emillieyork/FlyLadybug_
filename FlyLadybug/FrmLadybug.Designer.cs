@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblScore = new System.Windows.Forms.Label();
+            this.LblScore = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Txtlives = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -84,14 +84,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "score";
             // 
-            // lblScore
+            // LblScore
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(637, 242);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(13, 13);
-            this.lblScore.TabIndex = 4;
-            this.lblScore.Text = "0";
+            this.LblScore.AutoSize = true;
+            this.LblScore.Location = new System.Drawing.Point(637, 242);
+            this.LblScore.Name = "LblScore";
+            this.LblScore.Size = new System.Drawing.Size(13, 13);
+            this.LblScore.TabIndex = 4;
+            this.LblScore.Text = "0";
             // 
             // label3
             // 
@@ -118,7 +118,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.Txtlives);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.LblScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.label1);
@@ -141,7 +141,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label LblScore;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txtlives;
     }

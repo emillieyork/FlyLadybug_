@@ -20,6 +20,8 @@ namespace FlyLadybug
         Random speed = new Random();
         int[] ballSpeed = new int[7];
         bool up, down;
+        int score = 0;
+        int lives = 5;
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
@@ -27,6 +29,8 @@ namespace FlyLadybug
                 area[i].X += ballSpeed[i];
                 if(area[i].X > PnlGame.Width)
                 {
+                    score += 1;// add 1 to score
+                    LblScore.Text = score.ToString();//display score on the form
                     area[i].X = 20;
                 }
             }
