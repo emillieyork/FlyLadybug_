@@ -120,6 +120,18 @@ namespace FlyLadybug
                 //each ball has a random speed
             }
         }
+
+        //the CheckLives method will stop the balls and ladybug from moving if there are no lives left
+        //and a game over message will be displayed
+        private void CheckLives()
+        {
+            if (lives == 0)
+            {
+                TmrBall.Enabled = false;
+                TmrLadybug.Enabled = false;
+                MessageBox.Show("Game Over");
+            }
+        }
     }
 }
 
