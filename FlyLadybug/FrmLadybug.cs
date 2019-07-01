@@ -106,7 +106,10 @@ namespace FlyLadybug
 
         private void MnuStart_Click(object sender, EventArgs e)
         {
-
+            score = 0;//when game starts set the score to 0
+            LblScore.Text = score.ToString();//display the score on the form 
+            TmrBall.Enabled = true;//start the timer to move the balls
+            TmrLadybug.Enabled = true;//start the timer to move the ladybug
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
