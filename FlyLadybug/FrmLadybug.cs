@@ -19,7 +19,7 @@ namespace FlyLadybug
         Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
         Random speed = new Random();
         int[] ballSpeed = new int[7];
-        bool left, right;
+        bool up, down;
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
@@ -41,11 +41,11 @@ namespace FlyLadybug
         {
             if (e.KeyData == Keys.W)
             {
-                y -= 1;
+                up = true;
             }
             if (e.KeyData == Keys.A)
             {
-                y += 1;
+                down = true;
             }
         }
 
@@ -53,11 +53,11 @@ namespace FlyLadybug
         {
             if (e.KeyData == Keys.W)
             {
-                y = 0;
+                up = false;
             }
             if (e.KeyData == Keys.A)
             {
-                y = 0;
+                down = false;
             }
         }
 
@@ -82,7 +82,7 @@ namespace FlyLadybug
                                                         //position the balls
             for (int i = 0; i < 7; i++)
             {
-                area[i] = new Rectangle(x, y + 70 * i, 40, 40);
+                area[i] = new Rectangle(x, y + 70 * i, 20, 20);
 
                 ballSpeed[i] = speed.Next(5, 10);
                 //each ball has a random speed
