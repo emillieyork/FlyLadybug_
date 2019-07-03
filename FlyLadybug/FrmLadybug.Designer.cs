@@ -41,12 +41,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlGame
             // 
-            this.PnlGame.BackColor = System.Drawing.Color.LightGray;
+            this.PnlGame.BackColor = System.Drawing.Color.Azure;
             this.PnlGame.Location = new System.Drawing.Point(12, 149);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(600, 400);
@@ -117,6 +118,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuStart,
             this.MnuStop});
@@ -140,12 +142,22 @@
             this.MnuStop.Text = "Stop";
             this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(300, 50);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Fly Ladybug";
+            // 
             // FrmLadybug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Txtlives);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LblScore);
@@ -182,6 +194,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MnuStart;
         private System.Windows.Forms.ToolStripMenuItem MnuStop;
+        private System.Windows.Forms.Label label4;
     }
 }
 
