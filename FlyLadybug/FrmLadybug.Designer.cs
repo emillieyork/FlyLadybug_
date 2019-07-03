@@ -78,6 +78,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 2;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // label2
             // 
@@ -158,7 +159,6 @@
             this.Name = "FrmLadybug";
             this.Text = "Fly Ladybug ";
             this.Load += new System.EventHandler(this.FrmLadybug_Load);
-            this.TextChanged += new System.EventHandler(this.FrmLadybug_TextChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyUp);
             this.menuStrip1.ResumeLayout(false);

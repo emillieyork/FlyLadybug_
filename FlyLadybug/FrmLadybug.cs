@@ -123,21 +123,22 @@ namespace FlyLadybug
             MessageBox.Show("Use the up and down arrow keys to move the Ladybug.\n Don't get hit by the balls! \n Every Ball that goes past scores a point. \n If a ball hits the Ladybug a life lost!", "Game Instructions");
         }
 
-        private void FrmLadybug_TextChanged(object sender, EventArgs e)
+        private void TxtName_TextChanged(object sender, EventArgs e)
         {
             string context = TxtName.Text;
             bool isletter = true;
-            //for loop checks for letters as characters are entered 
-            for (int i=0;i< context.Length;i++)
+            //for loop checks for letters as charactes are entered
+            for (int i = 0; i < context.Length; i++)
             {
-                if (!char.IsLetter(context[i]))//if current character not a letter
+                if (!char.IsLetter(context[i]))//if current character not a letter 
                 {
-                    isletter = false;//make isletter false
-                    break; // exit the for loop
+                    isletter = false;//make isletter false 
+                    break; //exit the for loop
                 }
             }
-            //if not a letter clear the textbox and focus on it
-            // to enter name again
+
+            //if not a letter clear the textbox and focus on it 
+            //to enter name again
             if (isletter == false)
             {
                 TxtName.Clear();
