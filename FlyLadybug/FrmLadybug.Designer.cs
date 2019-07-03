@@ -158,6 +158,7 @@
             this.Name = "FrmLadybug";
             this.Text = "Fly Ladybug ";
             this.Load += new System.EventHandler(this.FrmLadybug_Load);
+            this.TextChanged += new System.EventHandler(this.FrmLadybug_TextChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyUp);
             this.menuStrip1.ResumeLayout(false);
