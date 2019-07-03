@@ -169,7 +169,7 @@ namespace FlyLadybug
                                                         //position the balls
             for (int i = 0; i < 7; i++)
             {
-                area[i] = new Rectangle(x, y + 70 * i, 20, 20);
+                area[i] = new Rectangle(x, y + 70 * i, 30, 30);
 
                 ballSpeed[i] = speed.Next(5, 10);
                 //each ball has a random speed
