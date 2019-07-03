@@ -48,7 +48,7 @@
             // PnlGame
             // 
             this.PnlGame.BackColor = System.Drawing.Color.Azure;
-            this.PnlGame.Location = new System.Drawing.Point(12, 149);
+            this.PnlGame.Location = new System.Drawing.Point(19, 136);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(600, 400);
             this.PnlGame.TabIndex = 0;
