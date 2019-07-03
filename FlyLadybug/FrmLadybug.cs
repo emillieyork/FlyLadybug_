@@ -112,6 +112,17 @@ namespace FlyLadybug
             TmrLadybug.Enabled = true;//start the timer to move the ladybug
         }
 
+        private void MnuStop_Click(object sender, EventArgs e)
+        {
+            TmrBall.Enabled = false;
+            TmrLadybug.Enabled = false;
+        }
+
+        private void FrmLadybug_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Use the up and down arrow keys to move the Ladybug.\n Don't get hit by the balls");
+        }
+
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
             //get the method from the graphic's class to paint on the panel

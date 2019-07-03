@@ -137,6 +137,7 @@
             this.MnuStop.Name = "MnuStop";
             this.MnuStop.Size = new System.Drawing.Size(43, 20);
             this.MnuStop.Text = "Stop";
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
             // FrmLadybug
             // 
@@ -156,6 +157,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmLadybug";
             this.Text = "Fly Ladybug ";
+            this.Load += new System.EventHandler(this.FrmLadybug_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLadybug_KeyUp);
             this.menuStrip1.ResumeLayout(false);
