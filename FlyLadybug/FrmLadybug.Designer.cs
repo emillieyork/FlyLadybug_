@@ -55,11 +55,11 @@
             // 
             // TmrBall
             // 
-            this.TmrBall.Enabled = true;
             this.TmrBall.Tick += new System.EventHandler(this.TmrBall_Tick);
             // 
             // TmrLadybug
             // 
+            this.TmrLadybug.Enabled = true;
             this.TmrLadybug.Interval = 50;
             this.TmrLadybug.Tick += new System.EventHandler(this.TmrLadybug_Tick);
             // 
