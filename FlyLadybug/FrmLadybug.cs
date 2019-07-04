@@ -120,7 +120,7 @@ namespace FlyLadybug
 
         private void FrmLadybug_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the up and down arrow keys to move the Ladybug.\n Don't get hit by the balls! \n Every Ball that goes past scores a point. \n If a ball hits the Ladybug a life lost!", "Game Instructions");
+            MessageBox.Show("Use the W and A keys to move the Ladybug up and down.\n Don't get hit by the balls! \n Every Ball that goes past scores a point. \n If a ball hits the Ladybug a life lost! \n to start the game enter your name and number of lives and push start.", "Game Instructions");
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
