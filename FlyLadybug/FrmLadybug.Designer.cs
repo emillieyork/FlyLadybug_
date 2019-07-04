@@ -56,6 +56,7 @@
             // 
             // TmrBall
             // 
+            this.TmrBall.Interval = 50;
             this.TmrBall.Tick += new System.EventHandler(this.TmrBall_Tick);
             // 
             // TmrLadybug
