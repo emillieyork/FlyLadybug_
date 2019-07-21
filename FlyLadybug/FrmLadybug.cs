@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace FlyLadybug
 {
@@ -170,6 +171,7 @@ namespace FlyLadybug
         public FrmLadybug()
         {
             InitializeComponent();
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic, null, PnlGame, new object[] { true });
             arealadybug = new Rectangle(x2, y2, 30, 30);//ladybugs rectangle 
                                                         //position the balls
             for (int i = 0; i < 7; i++)
