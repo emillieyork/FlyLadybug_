@@ -116,6 +116,7 @@
             this.Txtlives.Size = new System.Drawing.Size(100, 20);
             this.Txtlives.TabIndex = 6;
             this.Txtlives.Text = "5";
+            this.Txtlives.TextChanged += new System.EventHandler(this.Txtlives_TextChanged);
             // 
             // menuStrip1
             // 
