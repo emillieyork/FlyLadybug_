@@ -194,11 +194,10 @@ namespace FlyLadybug
                 MessageBox.Show("Game Over");
             }
         }
-        //the CheckScore method will increase the speed of the balls as the score increases 
-        private void CheckScore()
+       //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
+       private void CheckScore()
         {
-          
-            
+
         }
     }
 }
