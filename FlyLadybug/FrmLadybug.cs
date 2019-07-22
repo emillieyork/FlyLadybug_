@@ -20,7 +20,7 @@ namespace FlyLadybug
         Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
         Random speed = new Random();
         int[] ballSpeed = new int[7];
-        bool up, down;
+        bool Up, Down;
         int score = 0;
         int lives = 5;
         private void TmrBall_Tick(object sender, EventArgs e)
@@ -53,31 +53,31 @@ namespace FlyLadybug
 
         private void FrmLadybug_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.W)
+            if (e.KeyData == Keys.Up)
             {
-                up = true;
+                Up = true;
             }
-            if (e.KeyData == Keys.A)
+            if (e.KeyData == Keys.Down)
             {
-                down = true;
+                Down = true;
             }
         }
 
         private void FrmLadybug_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.W)
+            if (e.KeyData == Keys.Up)
             {
-                up = false;
+                Up = false;
             }
-            if (e.KeyData == Keys.A)
+            if (e.KeyData == Keys.Down)
             {
-                down = false;
+                Down = false;
             }
         }
 
         private void TmrLadybug_Tick(object sender, EventArgs e)
         {
-            if (up) //if W key pressed 
+            if (Up) //if W key pressed 
             {
                 if (arealadybug.Y < 10)
                 //check to see if ball within 10 of up side
@@ -90,7 +90,7 @@ namespace FlyLadybug
                     //else move 5 up
                 }
             }
-            if (down) //if A key pressed 
+            if (Down) //if A key pressed 
             {
                 if(arealadybug.Y > PnlGame.Height - 40)//is spaceship within 40 of right side 
                 {
