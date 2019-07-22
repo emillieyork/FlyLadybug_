@@ -147,11 +147,11 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 57);
+            this.label4.Location = new System.Drawing.Point(21, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(300, 50);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Fly Ladybug";
+            this.label4.Text = "Ladybug";
             // 
             // FrmLadybug
             // 
