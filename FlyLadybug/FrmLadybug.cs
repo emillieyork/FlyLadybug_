@@ -20,7 +20,7 @@ namespace FlyLadybug
         Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
         Random speed = new Random();
         int[] ballSpeed = new int[7];
-        bool Up, Down;
+        bool Up, Down, left, right;
         int score = 0;
         int lives = 5;
         private void TmrBall_Tick(object sender, EventArgs e)
@@ -61,6 +61,14 @@ namespace FlyLadybug
             {
                 Down = true;
             }
+            if (e.KeyData == Keys.Left)
+            {
+                left = true;
+            }
+            if (e.KeyData == Keys.Right)
+            {
+                right = true;
+            }
         }
 
         private void FrmLadybug_KeyUp(object sender, KeyEventArgs e)
@@ -73,14 +81,22 @@ namespace FlyLadybug
             {
                 Down = false;
             }
+            if (e.KeyData == Keys.Left)
+            {
+                left = false;
+            }
+            if (e.KeyData == Keys.Right)
+            {
+                right = false;
+            }
         }
 
         private void TmrLadybug_Tick(object sender, EventArgs e)
         {
-            if (Up) //if W key pressed 
+            if (Up) //if up key pressed 
             {
                 if (arealadybug.Y < 10)
-                //check to see if ball within 10 of up side
+                //check to see if ladybug within 10 of up side
                 {
                     arealadybug.Y = 10;
                     //if it is < 10 away "bounce" it (set position at 10)
@@ -90,15 +106,37 @@ namespace FlyLadybug
                     //else move 5 up
                 }
             }
-            if (Down) //if A key pressed 
+            if (Down) //if down key pressed 
             {
-                if(arealadybug.Y > PnlGame.Height - 40)//is spaceship within 40 of right side 
+                if(arealadybug.Y > PnlGame.Height - 40)//is ladybug within 40 of down side 
                 {
                     arealadybug.Y = PnlGame.Height - 40;
                 }
                 else
                 {
                     arealadybug.Y += 5;
+                }
+            }
+            if (left) //if left key pressed
+            {
+                if(arealadybug. X > PnlGame.Width - 40)//is ladybug within 10 of left side
+                {
+                    arealadybug.X = PnlGame.Width - 40;
+                }
+                else
+                {
+                    arealadybug.X -= 5;
+                }
+            }
+            if (right) //if right key pressed
+            {
+                if (arealadybug.X > PnlGame.Width - 40) //is lady bug within 10 of right side
+                {
+                    arealadybug.X = PnlGame.Width - 40;
+                }
+                else
+                {
+                    arealadybug.X += 5;
                 }
             }
         }
