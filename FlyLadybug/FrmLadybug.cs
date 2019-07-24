@@ -197,7 +197,13 @@ namespace FlyLadybug
        //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
        private void CheckScore()
         {
-
+            if (score > 10)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    ballSpeed[i] = speed.Next(5, 10 +5);
+                }
+            }
         }
     }
 }
