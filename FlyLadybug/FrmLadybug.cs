@@ -22,7 +22,7 @@ namespace FlyLadybug
         int[] ballSpeed = new int[7];
         bool Up, Down, left, right;
         int score = 0;
-        int lives = 5;
+        int lives = 6;
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
@@ -235,13 +235,8 @@ namespace FlyLadybug
        //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
        private void CheckScore()
         {
-            if (score > 10)
-            {
-                for (int i = 0; i < 7; i++)
-                {
-                    ballSpeed[i] = speed.Next(5, 10 +5);
-                }
-            }
+          
+            
         }
     }
 }
