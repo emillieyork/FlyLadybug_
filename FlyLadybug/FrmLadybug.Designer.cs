@@ -48,6 +48,7 @@
             // PnlGame
             // 
             this.PnlGame.BackColor = System.Drawing.Color.Azure;
+            this.PnlGame.BackgroundImage = global::FlyLadybug.Properties.Resources.skyaa_png;
             this.PnlGame.Location = new System.Drawing.Point(19, 136);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(600, 400);
@@ -157,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Txtlives);

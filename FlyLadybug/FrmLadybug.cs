@@ -234,10 +234,10 @@ namespace FlyLadybug
         }
        //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
        private void CheckScore()
-        {
+       {
           
             
-        }
+       }
     }
 }
 
