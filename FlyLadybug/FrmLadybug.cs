@@ -23,6 +23,11 @@ namespace FlyLadybug
         bool Up, Down, left, right;
         int score = 0;
         int lives = 6;
+        int x2 = 540, y2 = 250; //starting position of Ladybug
+        //Load our two images from the bin/debug folder
+        Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
+        Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
+
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
@@ -46,10 +51,6 @@ namespace FlyLadybug
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
-
-        int x2 = 540, y2 = 250; //starting position of Ladybug
-        //Load our two images from the bin/debug folder
-        Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
 
         private void FrmLadybug_KeyDown(object sender, KeyEventArgs e)
         {
@@ -143,14 +144,14 @@ namespace FlyLadybug
             }
         }
 
-        Image ball1 = Image.FromFile(Application.StartupPath + @"/dragon.png");
-
         private void MnuStart_Click(object sender, EventArgs e)
         {
             score = 0;//when game starts set the score to 0
             LblScore.Text = score.ToString();//display the score on the form 
             TmrBall.Enabled = true;//start the timer to move the balls
             TmrLadybug.Enabled = true;//start the timer to move the ladybug
+            lives = 5;
+            score = 0;
         }
 
         private void MnuStop_Click(object sender, EventArgs e)
