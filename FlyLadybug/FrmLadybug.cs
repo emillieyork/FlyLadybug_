@@ -119,13 +119,15 @@ namespace FlyLadybug
             }
             if (left) //if left key pressed
             {
-                if(arealadybug. X > PnlGame.Width - 40)//is ladybug within 10 of left side
+                if(arealadybug. X < 10)//check to see is ladybug within 10 of left side
                 {
-                    arealadybug.X = PnlGame.Width - 40;
+                    arealadybug.X = 10;
+                    //if it is < 10 away "bounce" it (set position ar 10)
                 }
                 else
                 {
                     arealadybug.X -= 5;
+                    //else move 5 to the left
                 }
             }
             if (right) //if right key pressed
@@ -235,7 +237,10 @@ namespace FlyLadybug
        //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
        private void CheckScore()
        {
-          
+          if (score == 10)
+            {
+
+            }
             
        }
     }
