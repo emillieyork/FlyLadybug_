@@ -22,7 +22,7 @@ namespace FlyLadybug
         int[] ballSpeed = new int[7];
         bool Up, Down, left, right;
         int score = 0;
-        int lives = 6;
+        int lives;
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
@@ -192,7 +192,24 @@ namespace FlyLadybug
 
         private void Txtlives_TextChanged(object sender, EventArgs e)
         {
-
+            string context = Txtlives.Text;
+            bool isnumber = true;
+            //for loop checks for numbers as characters are entered
+            for (int i = 0; i < context.Length; i++)
+            {
+                if (!char.IsNumber(context[i]))//if current character not a letter
+                {
+                    isnumber = false;//make isnumber false
+                    break; //exit the for loop
+                }
+            }
+            //if not a number clear the textbox and focus on it
+            //to enter lives again
+            if (isnumber == false)
+            {
+                Txtlives.Clear();
+                Txtlives.Focus();
+            }
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
@@ -238,7 +255,7 @@ namespace FlyLadybug
        {
           if (score == 10)
           {
-
+                
           }
             
        }
