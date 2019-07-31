@@ -31,7 +31,7 @@ namespace FlyLadybug
         private void TmrBall_Tick(object sender, EventArgs e)
         {
            for(int i=0;i<=6;i++)
-            {
+           {
                 area[i].X += ballSpeed[i];
                 //if spaceship collides with any planet lose a life and move planet to the top of the panel
                 if (area[i].IntersectsWith(arealadybug))
@@ -48,7 +48,7 @@ namespace FlyLadybug
                     LblScore.Text = score.ToString();//display score on the form
                     area[i].X = 20;
                 }
-            }
+           }
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
 
@@ -96,15 +96,13 @@ namespace FlyLadybug
         {
             if (Up) //if up key pressed 
             {
-                if (arealadybug.Y < 10)
-                //check to see if ladybug within 10 of up side
+                if (arealadybug.Y < 10)//check to see is ladybug within 10 of top
                 {
                     arealadybug.Y = 10;
-                    //if it is < 10 away "bounce" it (set position at 10)
                 }
+                else
                 {
                     arealadybug.Y -= 5;
-                    //else move 5 up
                 }
             }
             if (Down) //if down key pressed 
@@ -239,9 +237,9 @@ namespace FlyLadybug
        private void CheckScore()
        {
           if (score == 10)
-            {
+          {
 
-            }
+          }
             
        }
     }
