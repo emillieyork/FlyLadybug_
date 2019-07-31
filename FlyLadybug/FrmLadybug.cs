@@ -148,7 +148,6 @@ namespace FlyLadybug
             LblScore.Text = score.ToString();//display the score on the form 
             TmrBall.Enabled = true;//start the timer to move the balls
             TmrLadybug.Enabled = true;//start the timer to move the ladybug
-            lives = 5;
             score = 0;
         }
 
