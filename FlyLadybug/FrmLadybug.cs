@@ -159,7 +159,7 @@ namespace FlyLadybug
 
         private void FrmLadybug_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and  ,then push start.", "Game Instructions");
+            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and enter an amount of lives (must be less than 10), then push start.", "Game Instructions");
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace FlyLadybug
             //for loop checks for numbers as characters are entered
             for (int i = 0; i < context.Length; i++)
             {
-                if (!char.IsNumber(context[i]))//if current character not a letter
+                if (!char.IsNumber(context[i]))//if current character not a number
                 {
                     isnumber = false;//make isnumber false
                     break; //exit the for loop
@@ -209,6 +209,7 @@ namespace FlyLadybug
                 Txtlives.Clear();
                 Txtlives.Focus();
             }
+            
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
@@ -252,11 +253,10 @@ namespace FlyLadybug
        //the CheckScore method will increase the speed of the ball each time the player reaches a certain score
        private void CheckScore()
        {
-          if (score == 10)
-          {
+            if (score > 10)
+            {
                 
-          }
-            
+            }
        }
     }
 }
