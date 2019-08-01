@@ -48,7 +48,7 @@
             // PnlGame
             // 
             this.PnlGame.BackColor = System.Drawing.Color.Azure;
-            this.PnlGame.BackgroundImage = global::FlyLadybug.Properties.Resources.skyaa_png;
+            this.PnlGame.BackgroundImage = global::FlyLadybug.Properties.Resources.skyaaaaa_png;
             this.PnlGame.Location = new System.Drawing.Point(19, 136);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(600, 400);
