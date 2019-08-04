@@ -259,7 +259,7 @@ namespace FlyLadybug
 
         private void FrmLadybug_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and enter an amount of lives (must be less than 10), then push start.", "Game Instructions");
+            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and enter an amount of lives (must be less than 10) Then push start ", "Game Instructions");
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -309,7 +309,11 @@ namespace FlyLadybug
                 Txtlives.Clear();
                 Txtlives.Focus();
             }
-            
+
+            lives = int.Parse(Txtlives);
+            //display the number of lives on the form
+            Txtlives.Text = lives.ToString();
+            CheckLives();
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
