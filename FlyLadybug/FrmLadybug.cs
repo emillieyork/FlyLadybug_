@@ -51,9 +51,103 @@ namespace FlyLadybug
            }
            if (score > 10)
            {
-                TmrBall.Interval = 90;
+                TmrBall.Interval = 60;
            }
 
+           if (score > 20)
+           {
+                TmrBall.Interval = 50;
+           }
+
+           if (score > 30)
+           {
+                TmrBall.Interval = 45;
+           }
+
+           if (score > 40)
+           {
+                TmrBall.Interval = 40;
+           }
+
+           if (score > 50)
+           {
+                TmrBall.Interval = 35;
+           }
+
+           if (score > 60)
+           {
+                TmrBall.Interval = 30;
+           }
+
+           if (score > 70)
+           {
+                TmrBall.Interval = 27;
+           }
+
+           if (score > 80)
+           {
+                TmrBall.Interval = 25;
+           }
+
+           if (score > 90)
+           {
+                TmrBall.Interval = 22;
+           }
+
+           if (score > 100)
+           {
+                TmrBall.Interval = 20;
+           }
+
+           if (score > 110)
+           {
+                TmrBall.Interval = 19;
+           }
+
+           if (score > 120)
+           {
+                TmrBall.Interval = 18;
+           }
+
+           if (score > 130)
+           {
+                TmrBall.Interval = 17;
+           }
+
+           if (score > 140)
+           {
+                TmrBall.Interval = 16;
+           }
+
+           if (score > 150)
+           {
+                TmrBall.Interval = 15;
+           }
+
+           if (score > 160)
+           {
+                TmrBall.Interval = 14;
+           }
+
+           if (score > 170)
+           {
+                TmrBall.Interval = 13;
+           }
+
+           if (score > 180)
+           {
+                TmrBall.Interval = 12;
+           }
+
+           if (score > 190)
+           {
+                TmrBall.Interval = 11;
+           }
+
+           if (score > 200)
+           {
+                TmrBall.Interval = 10;
+           }
 
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
