@@ -310,10 +310,7 @@ namespace FlyLadybug
                 Txtlives.Focus();
             }
 
-            lives = int.Parse(Txtlives);
-            //display the number of lives on the form
-            Txtlives.Text = lives.ToString();
-            CheckLives();
+            
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
