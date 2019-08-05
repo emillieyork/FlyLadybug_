@@ -76,7 +76,7 @@ namespace FlyLadybug
 
            if (score > 60)
            {
-                TmrBall.Interval = 30;
+                TmrBall.Interval = 32;
            }
 
            if (score > 70)
