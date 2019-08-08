@@ -22,7 +22,7 @@ namespace FlyLadybug
         int[] ballSpeed = new int[7];
         bool Up, Down, left, right;
         int score = 0;
-        int lives;
+        int lives =5;
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
@@ -81,74 +81,123 @@ namespace FlyLadybug
 
            if (score > 70)
            {
-                TmrBall.Interval = 27;
+                TmrBall.Interval = 30;
            }
 
            if (score > 80)
            {
-                TmrBall.Interval = 25;
+                TmrBall.Interval = 27;
            }
 
            if (score > 90)
            {
-                TmrBall.Interval = 22;
+                TmrBall.Interval = 25;
            }
 
            if (score > 100)
            {
-                TmrBall.Interval = 20;
+                TmrBall.Interval = 22;
            }
 
            if (score > 110)
            {
-                TmrBall.Interval = 19;
+                TmrBall.Interval = 20;
            }
 
            if (score > 120)
            {
-                TmrBall.Interval = 18;
+                TmrBall.Interval = 19;
            }
 
            if (score > 130)
            {
-                TmrBall.Interval = 17;
+                TmrBall.Interval = 18;
            }
 
            if (score > 140)
            {
-                TmrBall.Interval = 16;
+                TmrBall.Interval = 17;
            }
 
            if (score > 150)
            {
-                TmrBall.Interval = 15;
+                TmrBall.Interval = 16;
            }
 
            if (score > 160)
            {
-                TmrBall.Interval = 14;
+                TmrBall.Interval = 15;
            }
 
            if (score > 170)
            {
-                TmrBall.Interval = 13;
+                TmrBall.Interval = 14;
            }
 
            if (score > 180)
            {
-                TmrBall.Interval = 12;
+                TmrBall.Interval = 13;
            }
 
            if (score > 190)
            {
-                TmrBall.Interval = 11;
+                TmrBall.Interval = 12;
            }
 
            if (score > 200)
            {
+                TmrBall.Interval = 11;
+           }
+
+           if (score > 210)
+           {
                 TmrBall.Interval = 10;
            }
 
+           if (score > 220)
+           {
+                TmrBall.Interval = 9;
+           }
+
+           if (score > 230)
+           {
+                TmrBall.Interval = 8;
+           }
+
+           if (score > 240)
+           {
+                TmrBall.Interval = 7;
+           }
+
+           if (score > 250)
+           {
+                TmrBall.Interval = 6;
+           }
+
+           if (score > 260)
+           {
+                TmrBall.Interval = 5;
+           }
+
+           if (score > 270)
+           {
+                TmrBall.Interval = 4;
+           }
+
+           if (score > 280)
+           {
+                TmrBall.Interval = 3;
+           }
+
+           if (score > 290)
+           {
+                TmrBall.Interval = 2;
+           }
+
+           if (score > 300)
+            {
+                TmrBall.Interval = 1;
+            }
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
 
@@ -259,7 +308,7 @@ namespace FlyLadybug
 
         private void FrmLadybug_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and enter an amount of lives (must be less than 10) Then push start ", "Game Instructions");
+            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right.\nDon't get hit by the balls! \nEvery Ball that goes past scores a point. \nIf a ball hits the Ladybug a life lost! \nto start the game enter your name (must be letters) and enter your time limit Then push start ", "Game Instructions");
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -309,8 +358,6 @@ namespace FlyLadybug
                 Txtlives.Clear();
                 Txtlives.Focus();
             }
-
-            
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
