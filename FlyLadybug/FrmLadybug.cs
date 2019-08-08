@@ -22,7 +22,7 @@ namespace FlyLadybug
         int[] ballSpeed = new int[7];
         bool Up, Down, left, right;
         int score = 0;
-        int lives =5;
+        int lives = 5;
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
@@ -195,9 +195,10 @@ namespace FlyLadybug
            }
 
            if (score > 300)
-            {
+           {
                 TmrBall.Interval = 1;
-            }
+           }
+
             PnlGame.Invalidate();//makes the paint event fire to redraw panel
         }
 
