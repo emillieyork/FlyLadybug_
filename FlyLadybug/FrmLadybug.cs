@@ -15,7 +15,7 @@ namespace FlyLadybug
     {
         Graphics g; //declare the graphics object
         int x = 20, y = 20; //starting position of ball
-        //declare a rectangle to contain the ladybug and spaceship and an area array to contain the balls
+        //declare a rectangle to contain the ladybug and an area array to contain the balls
         Rectangle arealadybug;
         Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
         Random speed = new Random();
@@ -33,7 +33,7 @@ namespace FlyLadybug
            for(int i=0;i<=6;i++)
            {
                 area[i].X += ballSpeed[i];
-                //if spaceship collides with any planet lose a life and move planet to the top of the panel
+                //if ladybug collides with any ball lose a life and move ball to the top of the panel
                 if (area[i].IntersectsWith(arealadybug))
                 {
                     area[i].X = 20;
@@ -367,7 +367,7 @@ namespace FlyLadybug
             g = e.Graphics;
             //use the DrawImage method to draw the ladybug on the panel 
             g.DrawImage(ladybug, arealadybug);
-            //use the DrawImage method to draw the dragon on the panel
+            //use the DrawImage method to draw the ball on the panel
             for (int i=0;i<6;i++)
             {
                 g.DrawImage(ball1, area[i]);
