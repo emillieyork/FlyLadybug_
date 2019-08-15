@@ -22,7 +22,7 @@ namespace FlyLadybug
         int[] ballSpeed = new int[7];
         bool Up, Down, left, right;
         int score = 0;
-        int lives = 5;
+        int lives;
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
@@ -294,6 +294,7 @@ namespace FlyLadybug
 
         private void MnuStart_Click(object sender, EventArgs e)
         {
+            lives = int.Parse(Txtlives.Text);
             score = 0;//when game starts set the score to 0
             LblScore.Text = score.ToString();//display the score on the form 
             TmrBall.Enabled = true;//start the timer to move the balls
@@ -401,4 +402,3 @@ namespace FlyLadybug
         }
     }
 }
-
