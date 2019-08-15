@@ -116,7 +116,6 @@
             this.Txtlives.Name = "Txtlives";
             this.Txtlives.Size = new System.Drawing.Size(100, 20);
             this.Txtlives.TabIndex = 6;
-            this.Txtlives.Text = "5";
             this.Txtlives.TextChanged += new System.EventHandler(this.Txtlives_TextChanged);
             // 
             // menuStrip1
@@ -158,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Txtlives);
