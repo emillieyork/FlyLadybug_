@@ -17,9 +17,9 @@ namespace FlyLadybug
         int x = 20, y = 20; //starting position of ball
         //declare a rectangle to contain the ladybug and an area array to contain the balls
         Rectangle arealadybug;
-        Rectangle[] area = new Rectangle[7]; //area[0] to area [6]
+        Rectangle[] area = new Rectangle[10]; //area[0] to area [9]
         Random speed = new Random();
-        int[] ballSpeed = new int[7];
+        int[] ballSpeed = new int[10];
         bool Up, Down, left, right;
         int score = 0;
         int lives;
@@ -30,7 +30,7 @@ namespace FlyLadybug
 
         private void TmrBall_Tick(object sender, EventArgs e)
         {
-           for(int i=0;i<=6;i++)
+           for(int i=0;i<=10;i++)
            {
                 area[i].X += ballSpeed[i];
                 //if ladybug collides with any ball lose a life and move ball to the top of the panel
@@ -369,7 +369,7 @@ namespace FlyLadybug
             //use the DrawImage method to draw the ladybug on the panel 
             g.DrawImage(ladybug, arealadybug);
             //use the DrawImage method to draw the ball on the panel
-            for (int i=0;i<6;i++)
+            for (int i=0;i<10;i++)
             {
                 g.DrawImage(ball1, area[i]);
             }
@@ -380,9 +380,9 @@ namespace FlyLadybug
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic, null, PnlGame, new object[] { true });
             arealadybug = new Rectangle(x2, y2, 30, 30);//ladybugs rectangle 
                                                         //position the balls
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 10; i++)
             {
-                area[i] = new Rectangle(x, y + 70 * i, 30, 30);
+                area[i] = new Rectangle(x, y + 39 * i, 25, 25);
 
                 ballSpeed[i] = speed.Next(5, 10);
                 //each ball has a random speed
