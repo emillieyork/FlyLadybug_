@@ -30,7 +30,7 @@ namespace FlyLadybug
 
         private void TmrBall_Tick(object sender, EventArgs e)
         {
-           for(int i=0;i<=10;i++)
+           for(int i=0;i<=9;i++)
            {
                 area[i].X += ballSpeed[i];
                 //if ladybug collides with any ball lose a life and move ball to the top of the panel
@@ -382,7 +382,7 @@ namespace FlyLadybug
                                                         //position the balls
             for (int i = 0; i < 10; i++)
             {
-                area[i] = new Rectangle(x, y + 39 * i, 25, 25);
+                area[i] = new Rectangle(x, y + 39 * i, 22, 22);
 
                 ballSpeed[i] = speed.Next(5, 10);
                 //each ball has a random speed
