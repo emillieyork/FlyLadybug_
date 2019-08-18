@@ -14,7 +14,7 @@ namespace FlyLadybug
     public partial class FrmLadybug : Form
     {
         Graphics g; //declare the graphics object
-        int x = 20, y = 20; //starting position of ball
+        int x = 15, y = 15; //starting position of ball
         //declare a rectangle to contain the ladybug and an area array to contain the balls
         Rectangle arealadybug;
         Rectangle[] area = new Rectangle[10]; //area[0] to area [9]
