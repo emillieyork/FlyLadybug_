@@ -61,140 +61,205 @@ namespace FlyLadybug
 
            if (score > 30)
            {
-                TmrBall.Interval = 45;
+                TmrBall.Interval = 47;
            }
 
            if (score > 40)
            {
-                TmrBall.Interval = 40;
+                TmrBall.Interval = 44;
            }
 
            if (score > 50)
            {
-                TmrBall.Interval = 35;
+                TmrBall.Interval = 42;
            }
 
            if (score > 60)
            {
-                TmrBall.Interval = 32;
+                TmrBall.Interval = 40;
            }
 
            if (score > 70)
            {
-                TmrBall.Interval = 31;
+                TmrBall.Interval = 37;
            }
 
            if (score > 80)
            {
-                TmrBall.Interval = 27;
+                TmrBall.Interval = 36;
            }
 
            if (score > 90)
            {
-                TmrBall.Interval = 25;
+                TmrBall.Interval = 35;
            }
 
            if (score > 100)
            {
-                TmrBall.Interval = 22;
+                TmrBall.Interval = 34;
            }
 
            if (score > 110)
            {
-                TmrBall.Interval = 20;
+                TmrBall.Interval = 33;
            }
 
            if (score > 120)
            {
-                TmrBall.Interval = 19;
+                TmrBall.Interval = 32;
            }
 
            if (score > 130)
            {
-                TmrBall.Interval = 18;
+                TmrBall.Interval = 31;
            }
 
            if (score > 140)
            {
-                TmrBall.Interval = 17;
+                TmrBall.Interval = 30;
            }
 
            if (score > 150)
            {
-                TmrBall.Interval = 16;
+                TmrBall.Interval = 29;
            }
 
            if (score > 160)
            {
-                TmrBall.Interval = 15;
+                TmrBall.Interval = 28;
            }
 
            if (score > 170)
            {
-                TmrBall.Interval = 14;
+                TmrBall.Interval = 27;
            }
 
            if (score > 180)
            {
-                TmrBall.Interval = 13;
+                TmrBall.Interval = 26;
            }
 
            if (score > 190)
            {
-                TmrBall.Interval = 12;
+                TmrBall.Interval = 25;
            }
 
            if (score > 200)
            {
-                TmrBall.Interval = 11;
+                TmrBall.Interval = 24;
            }
 
            if (score > 210)
            {
-                TmrBall.Interval = 10;
+                TmrBall.Interval = 23;
            }
 
            if (score > 220)
            {
-                TmrBall.Interval = 9;
+                TmrBall.Interval = 22;
            }
 
            if (score > 230)
            {
-                TmrBall.Interval = 8;
+                TmrBall.Interval = 21;
            }
 
            if (score > 240)
            {
-                TmrBall.Interval = 7;
+                TmrBall.Interval = 20;
            }
 
            if (score > 250)
            {
-                TmrBall.Interval = 6;
+                TmrBall.Interval = 19;
            }
 
            if (score > 260)
            {
-                TmrBall.Interval = 5;
+                TmrBall.Interval = 18;
            }
 
            if (score > 270)
            {
-                TmrBall.Interval = 4;
+                TmrBall.Interval = 17;
            }
 
            if (score > 280)
            {
-                TmrBall.Interval = 3;
+                TmrBall.Interval = 16;
            }
 
            if (score > 290)
            {
-                TmrBall.Interval = 2;
+                TmrBall.Interval = 15;
            }
 
            if (score > 300)
+           {
+                TmrBall.Interval = 14;
+           }
+
+           if (score > 310)
+           {
+                TmrBall.Interval = 13;
+           }
+
+           if (score > 320)
+           {
+                TmrBall.Interval = 12;
+           }
+
+           if (score > 330)
+           {
+                TmrBall.Interval = 11;
+           }
+
+           if (score > 340)
+           {
+                TmrBall.Interval = 10;
+           }
+
+           if (score > 350)
+           {
+                TmrBall.Interval = 9;
+           }
+
+           if (score > 360)
+           {
+                TmrBall.Interval = 8;
+           }
+
+           if (score > 370)
+           {
+                TmrBall.Interval = 7;
+           }
+
+           if (score > 380)
+           {
+                TmrBall.Interval = 6;
+           }
+
+           if (score > 390)
+           {
+                TmrBall.Interval = 5;
+           }
+
+           if (score > 400)
+           {
+                TmrBall.Interval = 4;
+           }
+
+           if (score > 410)
+           {
+                TmrBall.Interval = 3;
+           }
+
+           if (score > 420)
+           {
+                TmrBall.Interval = 2;
+           }
+
+           if (score > 430)
            {
                 TmrBall.Interval = 1;
            }
@@ -382,9 +447,9 @@ namespace FlyLadybug
                                                         //position the balls
             for (int i = 0; i < 10; i++)
             {
-                area[i] = new Rectangle(x, y + 39 * i, 22, 22);
+                area[i] = new Rectangle(x, y + 39 * i, 20, 20);
 
-                ballSpeed[i] = speed.Next(5, 10);
+                ballSpeed[i] = speed.Next(4, 10);
                 //each ball has a random speed
             }
         }
