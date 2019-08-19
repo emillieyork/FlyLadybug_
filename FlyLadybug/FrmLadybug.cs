@@ -14,7 +14,7 @@ namespace FlyLadybug
     public partial class FrmLadybug : Form
     {
         Graphics g; //declare the graphics object
-        int x = 14, y = 14; //starting position of ball
+        int x = 14, y = 14; //start position of ball
         //declare a rectangle to contain the ladybug and an area array to contain the balls
         Rectangle arealadybug;
         Rectangle[] area = new Rectangle[10]; //area[0] to area [9]
@@ -447,7 +447,7 @@ namespace FlyLadybug
                                                         //position the balls
             for (int i = 0; i < 10; i++)
             {
-                area[i] = new Rectangle(x, y + 39 * i, 20, 20);
+                area[i] = new Rectangle(x, y + 39 * i, 17, 17);
 
                 ballSpeed[i] = speed.Next(4, 10);
                 //each ball has a random speed
