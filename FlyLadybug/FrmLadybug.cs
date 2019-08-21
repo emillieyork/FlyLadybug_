@@ -37,14 +37,12 @@ namespace FlyLadybug
                 if (area[i].IntersectsWith(arealadybug))
                 {
                     area[i].X = 20;
-                    lives -= 1; //reduce lives by 1
-                    //display the number of lives on the form
-                    Txtlives.Text = lives.ToString();
-                    CheckLives();
+                    score += 2;// add 2 to score
+                    LblScore.Text = score.ToString();// display score on the form
                 }
                 if(area[i].X > PnlGame.Width)
                 {
-                    score += 1;// add 1 to score
+                    score -= 1;// subtract 1 from score
                     LblScore.Text = score.ToString();//display score on the form
                     area[i].X = 20;
                 }
@@ -449,7 +447,7 @@ namespace FlyLadybug
             {
                 area[i] = new Rectangle(x, y + 39 * i, 17, 17);
 
-                ballSpeed[i] = speed.Next(4, 10);
+                ballSpeed[i] = speed.Next(2, 6);
                 //each ball has a random speed
             }
         }
