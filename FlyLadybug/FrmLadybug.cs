@@ -33,16 +33,18 @@ namespace FlyLadybug
            for(int i=0;i<=9;i++)
            {
                 area[i].X += ballSpeed[i];
-                //if ladybug collides with any ball add 3 points and move ball to the top of the panel
+                //if ladybug collides with any ball lose a life and move ball to the top of the panel
                 if (area[i].IntersectsWith(arealadybug))
                 {
                     area[i].X = 20;
-                    score += 5;// add 5 to score
-                    LblScore.Text = score.ToString();//display score on the form
+                    lives -= 1; //reduce lives by 1
+                    //display the number of lives on the form
+                    Txtlives.Text = lives.ToString();
+                    CheckLives();
                 }
                 if(area[i].X > PnlGame.Width)
                 {
-                    score -= 1;// subtract 1 from score
+                    score += 1;// add 1 to score
                     LblScore.Text = score.ToString();//display score on the form
                     area[i].X = 20;
                 }
