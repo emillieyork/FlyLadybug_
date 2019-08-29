@@ -14,6 +14,7 @@ namespace FlyLadybug
     public partial class FrmLadybug : Form
     {
         Graphics g; //declare the graphics object
+        Random rand = new Random();
         int x = 14, y = 14; //start position of ball
         //declare a rectangle to contain the ladybug and an area array to contain the balls
         Rectangle arealadybug;
@@ -23,6 +24,7 @@ namespace FlyLadybug
         bool Up, Down, left, right;
         int score = 0;
         int lives;
+
         int x2 = 540, y2 = 250; //starting position of Ladybug
         //Load our two images from the bin/debug folder
         Image ladybug = Image.FromFile(Application.StartupPath + @"/ladybug.png");
@@ -49,6 +51,7 @@ namespace FlyLadybug
                     area[i].X = 20;
                 }
            }
+
            if (score > 10)
            {
                 TmrBall.Interval = 60;
@@ -385,7 +388,7 @@ namespace FlyLadybug
 
         private void FrmLadybug_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right to avoid the balls! \nEvery ball you dodge scores a point. \nIf a ball hits the Ladybug a life lost! \nTo start the game enter your name (must be letters) and amount of lives (reccomened between 5 and 10).Then push start\nBe aware the game will speed up as it goes on. ", "Game Instructions");
+            MessageBox.Show("Use the arrow keys to move the Ladybug up, down, left and right to avoid the balls! \nEvery ball you dodge scores a point. \nIf a ball hits the Ladybug a life lost! \nTo start the game enter your name (must be letters) and amount of lives (must be numbers).Then push start\nBe aware the game will speed up as it goes on. ", "Game Instructions");
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -448,6 +451,7 @@ namespace FlyLadybug
             {
                 g.DrawImage(ball1, area[i]);
             }
+           
         }
         public FrmLadybug()
         {
